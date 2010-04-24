@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{9A0BE06B-363E-48D5-94AB-10D46682034E}</ProjectGuid>
+    <ProjectGuid>{275BADA6-CF32-4749-9223-494340B95B03}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MyFramework</RootNamespace>
-    <AssemblyName>MyFramework</AssemblyName>
+    <RootNamespace>Core.Test</RootNamespace>
+    <AssemblyName>Core.Test</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,6 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.5.3.9345, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -45,8 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="BoolTest.cs" />
+    <Compile Include="EnumerableUtilsTest.cs" />
+    <Compile Include="ListTest.cs" />
+    <Compile Include="ObjectTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringTest.cs" />
+    <Compile Include="TypeTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{FED1DE28-7121-4414-B24D-4F04E630F3BC}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
